@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'HomeController@home');
 
 Route::get('contato', function() {
     return view('contato');
@@ -22,3 +20,5 @@ Route::get('contato', function() {
 Route::get('sobre', function() {
     return view('sobre');
 });
+
+Route::get('ola/{nome}', 'TestController@index');
